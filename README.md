@@ -12,7 +12,7 @@ Gets random names from the API. Sends the name data to Kafka topics every 10 sec
 
 `stream_to_kafka.py` -> The script that gets the data from API and sends it to Kafka topic
 
-`spark_streaming.py` -> The script that consumes the data fromo Kafka topic with Spark Structured Streaming
+`spark_streaming.py` -> The script that consumes the data from Kafka topic with Spark Structured Streaming
 
 `response.json` -> Sample response coming from the API
 
@@ -30,13 +30,16 @@ After cloning the repo, run the following command only once:
 docker build --rm --build-arg AIRFLOW_DEPS="datadog,dask" --build-arg PYTHON_DEPS="flask_oauthlib>=0.9" -t puckel/docker-airflow .
 ```
 
+### Navigate back to main project `kafka_spark_structured_streaming`
 Then change the docker-compose-LocalExecutor.yml file with the one in this repo and add `requirements.txt` file in the folder. This will bind the Airflow container with Kafka and Spark container and necessary modules will automatically be installed:
 
 ```bash
 docker-compose -f docker-compose-LocalExecutor.yml up -d
 ```
 
-Now you have a running Airflow container and you can access the UI at `https://localhost:8080`
+Now you have a running Airflow container and you can access the UI at `https://localhost:8080` OR `http://localhost:8080/admin/`
+
+You can open docker desktop and click on `OPEN TO BROWSER` on the Airflow image.
 
 ## Apache Kafka
 
