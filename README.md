@@ -39,7 +39,7 @@ docker-compose -f docker-compose-LocalExecutor.yml up -d
 
 Now you have a running Airflow container and you can access the UI at `https://localhost:8080` OR `http://localhost:8080/admin/`
 
-You can open docker desktop and click on `OPEN TO BROWSER` on the Airflow image.
+You can open the docker desktop and click on `OPEN TO BROWSER` on the Airflow image.
 
 ## Apache Kafka
 
